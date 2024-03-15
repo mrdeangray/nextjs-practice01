@@ -6,6 +6,7 @@ export default function Navbar() {
 
     const [cities, setCities] = useState(["paris", "london"])
     const [daws, setDaw] = useState(["FLS", "REAPER", "Bitwig"])
+    const [countries, setCountries] = useState(["JA", "USA", "UK"])
 
     return (
         <ul>
@@ -21,6 +22,14 @@ export default function Navbar() {
                 daws.map((daw) => (
                     <li key={daw}>
                         <Link href={`/daw/${daw}`}>{daw.toUpperCase()}</Link>
+                    </li>
+                ))
+
+            }
+            {
+                countries.map((country) => (
+                    <li key={country}>
+                        <Link href={`/country/${country}`}>{country.toUpperCase()}</Link>
                     </li>
                 ))
 
