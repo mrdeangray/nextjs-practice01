@@ -8,6 +8,7 @@ export default function Navbar() {
     const [daws, setDaw] = useState(["FLS", "REAPER", "Bitwig"]);
     const [countries, setCountries] = useState(["JA", "USA", "UK"]);
     const [cars, setCars] = useState(["Nissan", "Honda", "Toyota"]);
+    const [companies, setCompanies] = useState(["Nike", "Addidas", "Reebok"]);
 
     return (
         <ul>
@@ -39,6 +40,14 @@ export default function Navbar() {
                 cars.map((car) => (
                     <li key={car}>
                         <Link href={`/car/${car}`}>{car.toUpperCase()}</Link>
+                    </li>
+                ))
+
+            }
+                        {
+                companies.map((company) => (
+                    <li key={company}>
+                        <Link href={`/company/${company}`}>{company.toUpperCase()}</Link>
                     </li>
                 ))
 
