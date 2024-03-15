@@ -7,6 +7,7 @@ export default function Navbar() {
     const [cities, setCities] = useState(["paris", "london"])
     const [daws, setDaw] = useState(["FLS", "REAPER", "Bitwig"])
     const [countries, setCountries] = useState(["JA", "USA", "UK"])
+    const [drinks, setDrinks] = useState(["Sunkist", "Sprite", "Coke"])
 
     return (
         <ul>
@@ -30,6 +31,14 @@ export default function Navbar() {
                 countries.map((country) => (
                     <li key={country}>
                         <Link href={`/country/${country}`}>{country.toUpperCase()}</Link>
+                    </li>
+                ))
+
+            }
+            {
+                drinks.map((drink) => (
+                    <li key={drink}>
+                        <Link href={`/drink/${drink}`}>{drink.toUpperCase()}</Link>
                     </li>
                 ))
 
