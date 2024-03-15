@@ -1,13 +1,14 @@
-"use client"
+"use client";
 import { useState } from "react";
 import Link from "next/link";
 
 export default function Navbar() {
 
-    const [cities, setCities] = useState(["paris", "london"])
-    const [daws, setDaw] = useState(["FLS", "REAPER", "Bitwig"])
-    const [countries, setCountries] = useState(["JA", "USA", "UK"])
-    const [cars, setCars] = useState(["Nissan", "Honda", "Toyota"])
+    const [cities, setCities] = useState(["paris", "london"]);
+    const [daws, setDaw] = useState(["FLS", "REAPER", "Bitwig"]);
+    const [countries, setCountries] = useState(["JA", "USA", "UK"]);
+    const [cars, setCars] = useState(["Nissan", "Honda", "Toyota"]);
+
     return (
         <ul>
             {
@@ -34,7 +35,7 @@ export default function Navbar() {
                 ))
 
             }
-                        {
+            {
                 cars.map((car) => (
                     <li key={car}>
                         <Link href={`/car/${car}`}>{car.toUpperCase()}</Link>
