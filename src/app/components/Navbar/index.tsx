@@ -9,6 +9,7 @@ export default function Navbar() {
     const [countries, setCountries] = useState(["JA", "USA", "UK"]);
     const [cars, setCars] = useState(["Nissan", "Honda", "Toyota"]);
     const [companies, setCompanies] = useState(["Nike", "Addidas", "Reebok"]);
+    const [states, setStates] = useState(["Florida", "Georgia", "California"]);
 
     return (
         <ul>
@@ -52,6 +53,14 @@ export default function Navbar() {
                 ))
 
             }
+                                  {
+                states.map((state) => (
+                    <li key={state}>
+                        <Link href={`/state/${state}`}>{state.toUpperCase()}</Link>
+                    </li>
+                ))
+
+            }  
         </ul>
     );
 }
