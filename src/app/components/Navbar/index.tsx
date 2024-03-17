@@ -10,9 +10,17 @@ export default function Navbar() {
     const [cars, setCars] = useState(["Nissan", "Honda", "Toyota"]);
     const [companies, setCompanies] = useState(["Nike", "Addidas", "Reebok"]);
     const [states, setStates] = useState(["Florida", "Georgia", "California"]);
-
+    const [trucks, setTrucks] = useState(["Ram", "F150", "Silverado"]);
     return (
         <ul>
+                    {
+                trucks.map((truck) => (
+                    <li key={truck}>
+                        <Link href={`/truck/${truck}`}>{truck.toUpperCase()}</Link>
+                    </li>
+                ))
+
+            }    
             {
                 cities.map((city) => (
                     <li key={city}>
