@@ -12,8 +12,18 @@ export default function Navbar() {
     const [states, setStates] = useState(["Florida", "Georgia", "California"]);
     const [trucks, setTrucks] = useState(["Ram", "F150", "Silverado"]);
     const [languages, setLanguage] = useState(["English", "Spanish", "French"]);
+    const [shoes, setShoes] = useState(["NB", "Sketchers"]);
     return (
         <ul>
+                                        {
+                shoes.map((shoe) => (
+                    <span key={shoe}>
+                        <Link href={`/shoe/${shoe}`}>{shoe.toUpperCase()} </Link> 
+                    </span>
+                  
+                ))
+
+            } 
                                {
                 languages.map((language) => (
                     <span key={language}>
@@ -35,49 +45,49 @@ export default function Navbar() {
              </li>  
             {
                 cities.map((city) => (
-                    <li key={city}>
-                        <Link href={`/city/${city}`}>{city.toUpperCase()}</Link>
-                    </li>
+                    <span key={city}>
+                        <Link href={`/city/${city}`}>{city.toUpperCase()} </Link>
+                    </span>
                 ))
 
             }
             {
                 daws.map((daw) => (
-                    <li key={daw}>
-                        <Link href={`/daw/${daw}`}>{daw.toUpperCase()}</Link>
-                    </li>
+                    <span key={daw}>
+                        <Link href={`/daw/${daw}`}>{daw.toUpperCase()} </Link>
+                    </span>
                 ))
 
             }
             {
                 countries.map((country) => (
-                    <li key={country}>
-                        <Link href={`/country/${country}`}>{country.toUpperCase()}</Link>
-                    </li>
+                    <span key={country}>
+                        <Link href={`/country/${country}`}>{country.toUpperCase()} </Link>
+                    </span>
                 ))
 
             }
             {
                 cars.map((car) => (
-                    <li key={car}>
-                        <Link href={`/car/${car}`}>{car.toUpperCase()}</Link>
-                    </li>
+                    <span key={car}>
+                        <Link href={`/car/${car}`}>{car.toUpperCase()} </Link>
+                    </span>
                 ))
 
             }
                         {
                 companies.map((company) => (
-                    <li key={company}>
-                        <Link href={`/company/${company}`}>{company.toUpperCase()}</Link>
-                    </li>
+                    <span key={company}>
+                        <Link href={`/company/${company}`}>{company.toUpperCase()} </Link>
+                    </span>
                 ))
 
             }
                                   {
                 states.map((state) => (
-                    <li key={state}>
-                        <Link href={`/state/${state}`}>{state.toUpperCase()}</Link>
-                    </li>
+                    <span key={state}>
+                        <Link href={`/state/${state}`}>{state.toUpperCase()} </Link>
+                    </span>
                 ))
 
             }  
