@@ -13,12 +13,13 @@ export default function Navbar() {
     const [trucks, setTrucks] = useState(["Ram", "F150", "Silverado"]);
     const [languages, setLanguage] = useState(["English", "Spanish", "French"]);
     const [shoes, setShoes] = useState(["NB", "Sketchers"]);
+    const [genres, setGenres] = useState(["Rock", "EDM"]);
     return (
         <ul>
                                         {
-                shoes.map((shoe) => (
-                    <span key={shoe}>
-                        <Link href={`/shoe/${shoe}`}>{shoe.toUpperCase()} </Link> 
+                genres.map((genre) => (
+                    <span key={genre}>
+                        <Link href={`/genre/${genre}`}>{genre.toUpperCase()} </Link> 
                     </span>
                   
                 ))
