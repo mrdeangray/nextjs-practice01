@@ -14,8 +14,18 @@ export default function Navbar() {
     const [languages, setLanguage] = useState(["English", "Spanish", "French"]);
     const [shoes, setShoes] = useState(["NB", "Sketchers"]);
     const [genres, setGenres] = useState(["Rock", "EDM"]);
+    const [grades, setGrades] = useState(["Freshmen", "Sophomore"]);
     return (
         <ul>
+              {
+                grades.map((grade) => (
+                    <span key={grade}>
+                        <Link href={`/grades/${grade}`}>{grade.toUpperCase()} </Link> 
+                    </span>
+                  
+                ))
+
+            } 
                                         {
                 genres.map((genre) => (
                     <span key={genre}>
